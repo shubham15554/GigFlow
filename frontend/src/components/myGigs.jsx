@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import { AuthContext } from "./context/authContext";
 import { Navigate, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+
 const MyGigs = () => {
   const Navigate = useNavigate();
   const [gigs, setGigs] = useState([]);
