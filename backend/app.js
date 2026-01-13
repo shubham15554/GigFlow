@@ -19,13 +19,8 @@ const io = connectToSocket(server);
 app.use(cookieParser());
 app.use(express.json());
 
-app.use(cors({
-  origin: ["http://localhost:5173","https://gig-flow-khaki.vercel.app/"], 
-  credentials: true ,
-  allowedHeaders: ["Content-Type","Authorization"]              
-}));
 
-
+app.use(cors());
 
 app.use("/user" , userRoutes);
 app.use("/api/gigs", gigRoutes);
