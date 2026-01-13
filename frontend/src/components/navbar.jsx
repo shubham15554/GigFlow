@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "./context/authContext";
 import { useContext, useEffect } from "react";
+import { toast } from "react-toastify";
 function Navbar() {
     let  navigate = useNavigate();
 
