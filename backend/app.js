@@ -21,7 +21,8 @@ app.use(express.json());
 
 app.use(cors({
   origin: ["http://localhost:5173","https://gig-flow-khaki.vercel.app/"], 
-  credentials: true               
+  credentials: true ,
+  allowedHeaders: ["Content-Type","Authorization"]              
 }));
 
 
