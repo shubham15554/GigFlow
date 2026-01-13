@@ -17,7 +17,7 @@ function Navbar() {
 
     const handleClick = async ()=>{
       await axios.post(
-      "http://localhost:8000/user/logout",
+      "https://gigflow-3j81.onrender.com/user/logout",
       {},
       { withCredentials: true }
      

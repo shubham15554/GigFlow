@@ -14,7 +14,7 @@ const Dashboard = () => {
     const verifyUser = async () => {
       try {
         const { data } = await axios.post(
-          "http://localhost:8000/user/verify",
+          "https://gigflow-3j81.onrender.com/user/verify",
           {},
           { withCredentials: true }
         );
@@ -28,6 +28,7 @@ const Dashboard = () => {
         console.log("verify me uesr " , data);
         toast(`Hello ${data.user.username}`, { position: "top-right" });
       } catch (error) {
+        setUserData(data.user);
         navigate("/login");
       }
     };

@@ -19,7 +19,7 @@ export  const AuthProvider = ({children}) => {
     const handleRegister =  async (username , email , password)=>{
        try{
        
-        let res = await axios.post("http://localhost:8000/user/signup" , {
+        let res = await axios.post("https://gigflow-3j81.onrender.com/user/signup" , {
             username: username,
             email : email,
             password : password
@@ -43,7 +43,7 @@ export  const AuthProvider = ({children}) => {
     const handleLogin =  async (email,password)=>{
        try{
           
-         let res = await axios.post("http://localhost:8000/user/login" , {
+         let res = await axios.post("https://gigflow-3j81.onrender.com/user/login" , {
             email: email,
             password: password
          } , { withCredentials: true } );

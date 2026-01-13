@@ -12,7 +12,7 @@ function MyBids() {
     const fetchMyBids = async () => {
       try {
         setLoading(true);
-        const res = await axios.get("http://localhost:8000/api/bids/myBids", {
+        const res = await axios.get("https://gigflow-3j81.onrender.com/api/bids/myBids", {
           withCredentials: true,
         });
         setBids(res.data);

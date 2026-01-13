@@ -11,7 +11,7 @@ function ApplyPage() {
 
     const handleClick = async ()=>{
        try{
-        let res = await axios.post("http://localhost:8000/api/bids" , {
+        let res = await axios.post("https://gigflow-3j81.onrender.com/api/bids" , {
           gigId,     
           message,
           price,

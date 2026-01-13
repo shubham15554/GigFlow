@@ -19,7 +19,7 @@ const AllGigs = () => {
   const fetchGigs = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:8000/api/gigs?search=${search}`, {
+      const res = await axios.get(`https://gigflow-3j81.onrender.com/api/gigs?search=${search}`, {
         withCredentials: true, 
       });
       setGigs(res.data);

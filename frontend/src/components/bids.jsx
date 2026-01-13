@@ -34,7 +34,7 @@ function Bids() {
     const handleClick = async (bidId) => {
       try {
          const res = await axios.post(
-          `http://localhost:8000/api/bids/hireBid/${bidId}`,
+          `https://gigflow-3j81.onrender.com/api/bids/hireBid/${bidId}`,
           {},
           { withCredentials: true }
         );

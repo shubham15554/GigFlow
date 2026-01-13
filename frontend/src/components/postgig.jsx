@@ -12,7 +12,7 @@ function PostGig() {
     const handleClick = async ()=>{
        try{
         
-        let res = await axios.post("http://localhost:8000/api/gigs" , {
+        let res = await axios.post("https://gigflow-3j81.onrender.com/api/gigs" , {
             title,
             budget,
             description

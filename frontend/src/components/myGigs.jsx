@@ -19,7 +19,7 @@ const MyGigs = () => {
   const fetchGigs = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`http://localhost:8000/api/gigs/myGigs`, {
+      const res = await axios.get(`https://gigflow-3j81.onrender.com/api/gigs/myGigs`, {
         withCredentials: true, 
       });
       setGigs(res.data);
