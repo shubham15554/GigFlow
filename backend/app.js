@@ -20,8 +20,20 @@ app.use(cookieParser());
 app.use(express.json());
 
 
-app.use(cors());
 
+const FRONTEND_URL = "https://gig-flow-khaki.vercel.app";
+
+app.use(cors({
+  origin: FRONTEND_URL,   
+  credentials: true,
+  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+  allowedHeaders: ["Content-Type","Authorization"]
+}));
+
+app.options("*", cors({
+  origin: FRONTEND_URL,
+  credentials: true
+}));
 app.use("/user" , userRoutes);
 app.use("/api/gigs", gigRoutes);
 app.use("/api/bids", bidRoutes);
