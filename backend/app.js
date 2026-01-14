@@ -19,21 +19,14 @@ const io = connectToSocket(server);
 app.use(cookieParser());
 app.use(express.json());
 
-
-
-const FRONTEND_URL = "https://gig-flow-khaki.vercel.app";
-
 app.use(cors({
-  origin: FRONTEND_URL,   
-  credentials: true,
-  methods: ["GET","POST","PUT","DELETE","OPTIONS"],
-  allowedHeaders: ["Content-Type","Authorization"]
+  origin: ["http://localhost:5173","https://gig-flow-khaki.vercel.app"], 
+  credentials: true ,
+  allowedHeaders: ["Content-Type","Authorization"],
+  methods: ["GET","POST","PUT","DELETE","OPTIONS"]              
 }));
 
-app.options("*", cors({
-  origin: FRONTEND_URL,
-  credentials: true
-}));
+
 app.use("/user" , userRoutes);
 app.use("/api/gigs", gigRoutes);
 app.use("/api/bids", bidRoutes);
