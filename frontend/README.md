@@ -1,16 +1,45 @@
-# React + Vite
+# GigFlow - Gig Marketplace Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+GigFlow is a full-stack application designed to connect freelancers with opportunities. Users can post gigs, browse open positions, apply for work, and manage their hiring process all in one place.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+- **Frontend:** [https://gig-flow-khaki.vercel.app](https://gig-flow-khaki.vercel.app)
+- **Backend API:** [https://gigflow-3j81.onrender.com](https://gigflow-3j81.onrender.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
+- **Frontend:** React.js, Tailwind CSS, [Insert State Management, e.g., Redux Toolkit]
+- **Backend:** Node.js, Express.js
+- **Database:** MongoDB
+- **Authentication:** JWT (JSON Web Tokens) with HttpOnly Cookies
 
-## React Compiler
+## 📖 Key Features & Workflow
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Authentication
+* **Secure Signup/Login:** Users must authenticate to access the marketplace.
+* **Protected Routes:** Only logged-in users can create or apply for gigs.
 
-## Expanding the ESLint configuration
+### 2. Dashboard & Discovery
+* **Browse Gigs:** View all open opportunities posted by other users.
+* **Search & Filter:** Find specific gigs using the search functionality.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 3. User Management
+* **Create Gigs:** Users can post their own gig requirements.
+* **My Gigs:** A dedicated section to manage gigs you have personally posted.
+* **My Bids:** Track all the applications you have submitted to other gigs.
+
+### 4. Hiring Workflow
+* **Application System:** Users can apply (bid) on any open gig.
+* **Review Applications:** Gig owners can see a list of applicants for their specific gigs.
+* **Hiring:** Owners have the ability to select and "Hire" the right candidate directly from the applications list.
+
+## ⚙️ Local Setup Instructions
+
+### Prerequisites
+- Node.js installed
+- MongoDB Atlas account or local MongoDB
+
+### Installation
+1. **Clone the repository**
+   ```bash
+   git clone [https://github.com/shubham15554/GigFlow.git](https://github.com/shubham15554/GigFlow.git)
+   cd GigFlow
