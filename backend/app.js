@@ -46,4 +46,23 @@ const start = async ()=>{
     
 }
 
+
+
+
+const url2 = `https://gigflow-3j81.onrender.com`;
+const interval = 5 * 60 * 1000; // 5 minutes
+
+function reloadWebsite() {
+  axios
+    .get(url2)
+    .then((response) => {
+      console.log("website reloded");
+    })
+    .catch((error) => {
+      console.error(`Error : ${error.message}`);
+    });
+}
+
+setInterval(reloadWebsite, interval);
+
 start();
